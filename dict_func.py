@@ -1,7 +1,16 @@
 def employee_print(employee_info):
-    print("Name:", employee_info["Name"])  
-    print("Salary:", employee_info["Salary"])
-    print("Role:", employee_info["Role"])
+    data = employee_info.copy()
 
-    for key in employee_info:
-        print(key, employee_info[key])  
+    name = data.pop("Name", "N/A")
+    salary = data.pop("Salary", "N/A")
+    role = data.pop("Role", "N/A")
+
+    print(f"Name: {name}")
+    print(f"Salary: {salary}")
+    print(f"Role: {role}")
+
+    if len(data) == 0:
+        print("No other info!")
+    else:
+        for key, value in data.items():
+            print(f"{key}: {value}")
