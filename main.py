@@ -21,14 +21,15 @@ def main():
             print("a. Display all students")
             print("b. Display selected students")
 
-            sub_option = input()
+            sub = input()
 
-            if sub_option == "a":
+            if sub == "a":
                 avg_by_student(my_grades)
 
-            elif sub_option == "b":
-                names = input("Enter student names (comma-separated): ")
-                names_list = [name.strip() for name in names.split(",")]
+            elif sub == "b":
+                print("Enter student names (comma-separated):")
+                names = input()
+                names_list = [n.strip() for n in names.split(",")]
                 avg_by_student(my_grades, names_list)
 
             else:
@@ -40,6 +41,3 @@ def main():
 
         else:
             print("Invalid option selected!")
-
-if __name__ == "__main__":
-    main()
