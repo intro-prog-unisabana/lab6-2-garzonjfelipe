@@ -1,3 +1,29 @@
+def initialize_dict(student_name, subject_grades):
+    return {student_name: subject_grades}
+
+
+def add_student(student_grades={}):
+    name = input("Enter student name: ")
+    name = name.title()
+
+    subjects = {}
+
+    while True:
+        entry = input("Enter subject and grade (or 'exit' to finish): ")
+        
+        if entry.lower() == "exit":
+            break
+
+        subject, grade = entry.split(",")
+        subjects[subject.title()] = float(grade)
+
+    student_grades[name] = subjects
+
+    print(f"Student {name} successfully added to the grades management system.")
+
+    return student_grades
+
+
 def get_students(student_grades, keys):
     result = {}
 
@@ -13,3 +39,17 @@ def get_students(student_grades, keys):
             print(f"{name.title()} not found!")
 
     return result
+
+
+def avg_by_student(student_grades, keys=None):
+
+    if keys is None:
+        for student, grades in student_grades.items():
+            avg = sum(grades.values()) / len(grades)
+            print(f"{student}: {round(avg,1)}")
+    else:
+        selected = get_students(student_grades, keys)
+
+        for student, grades in selected.items():
+            avg = sum(grades.values()) / len(grades)
+            print(f"{student}: {round(avg,1)}")

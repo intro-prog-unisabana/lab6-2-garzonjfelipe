@@ -34,7 +34,8 @@ def menu():
 
 
 def run_program():
-    print("Welcome to the Fruit Shop!\n")
+    print("Welcome to the Fruit Shop!")
+    print()
 
     inventory = {
         "apples": 10,

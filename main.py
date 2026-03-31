@@ -1,7 +1,8 @@
 from grades_manager import add_student, avg_by_student
 
 def main():
-    print("Welcome to the Student Grades Manager!\n")
+    print("Welcome to the Student Grades Manager!")
+    print()
 
     my_grades = {}
 
@@ -41,3 +42,7 @@ def main():
 
         else:
             print("Invalid option selected!")
+
+
+if __name__ == "__main__":
+    main()
