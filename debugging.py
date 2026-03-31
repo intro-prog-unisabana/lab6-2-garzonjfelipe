@@ -34,14 +34,13 @@ def menu():
 
 
 def run_program():
+    print("Welcome to the Fruit Shop!\n")
+
     inventory = {
         "apples": 10,
         "bananas": 20,
         "oranges": 15
     }
-
-    print("Welcome to the Fruit Shop!")
-    print()
 
     while True:
         menu()
@@ -49,10 +48,13 @@ def run_program():
 
         if option == "1":
             show_inventory(inventory)
+
         elif option == "2":
             add_fruit(inventory)
+
         elif option == "3":
             update_stock(inventory)
+
         elif option == "4":
             print("Goodbye!")
             break
