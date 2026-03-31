@@ -1,33 +1,28 @@
 def show_inventory(inventory):
-    print()
-    print("Current Inventory:")
-    for fruit, stock in inventory.items():
+    print("\nCurrent Inventory:")
+    for fruit, stock in inventory.items():   # FIX 1
         print(f"{fruit}: {stock}")
     print()
 
 
 def add_fruit(inventory):
     fruit = input("Enter the name of the new fruit: ").strip()
-    if fruit in inventory:
-        print(f"{fruit} already exists!")
-        print()
+    if fruit in inventory:   # FIX 2
+        print(f"{fruit} already exists!\n")
     else:
         stock = input(f"Enter stock for {fruit}: ")
-        inventory[fruit] = int(stock)
-        print(f"{fruit} added with stock {stock}.")
-        print()
+        inventory[fruit] = int(stock)   # FIX 3
+        print(f"{fruit} added with stock {stock}.\n")
 
 
 def update_stock(inventory):
     fruit = input("Enter the name of the fruit to update: ").strip()
-    if fruit in inventory:
+    if fruit in inventory:   # FIX 4
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
-        inventory[fruit] += int(amount)
-        print(f"{fruit} stock increased by {amount}.")
-        print()
+        inventory[fruit] += int(amount)   # FIX 5
+        print(f"{fruit} stock increased by {amount}.\n")
     else:
-        print(f"{fruit} is not in inventory. Use option 2 to add it.")
-        print()
+        print(f"{fruit} is not in inventory. Use option 2 to add it.\n")
 
 
 def menu():
@@ -39,14 +34,13 @@ def menu():
 
 
 def run_program():
-    print("Welcome to the Fruit Shop!")
-    print()
-
     inventory = {
         "apples": 10,
         "bananas": 20,
         "oranges": 15
     }
+
+    print("Welcome to the Fruit Shop!\n")
 
     while True:
         menu()
@@ -54,13 +48,10 @@ def run_program():
 
         if option == "1":
             show_inventory(inventory)
-
         elif option == "2":
             add_fruit(inventory)
-
         elif option == "3":
             update_stock(inventory)
-
         elif option == "4":
             print("Goodbye!")
             break
