@@ -1,26 +1,21 @@
 def show_inventory(inventory):
     print("\nCurrent Inventory:")
-    
     for fruit, stock in inventory.items():
         print(f"{fruit}: {stock}")
-    print()
 
 def add_fruit(inventory):
     fruit = input("Enter the name of the new fruit: ").strip()
-    if fruit in inventory.keys():
+    if fruit in inventory:
         print(f"{fruit} already exists!\n")
     else:
         stock = input(f"Enter stock for {fruit}: ")
-       
         inventory[fruit] = int(stock)
         print(f"{fruit} added with stock {stock}.\n")
 
 def update_stock(inventory):
     fruit = input("Enter the name of the fruit to update: ").strip()
-   
     if fruit in inventory:
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
-        
         inventory[fruit] += int(amount)
         print(f"{fruit} stock increased by {amount}.\n")
     else:
@@ -34,12 +29,13 @@ def menu():
     print("4 - Exit")
 
 def run_program():
-    
     inventory = {
         "apples": 10,
         "bananas": 20,
         "oranges": 15
     }
+    
+    print("Welcome to the Fruit Shop!")
     
     while True:
         menu()
@@ -53,9 +49,5 @@ def run_program():
         elif option == "4":
             print("Goodbye!")
             break
-        else:
-            print("Invalid option.\n")
 
-
-if __name__ == "__main__":
-    run_program()
+run_program()
