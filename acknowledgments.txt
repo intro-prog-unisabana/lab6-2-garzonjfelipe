@@ -40,4 +40,5 @@ https://github.com/garzonjfelipe
  ******************************************************************************/
 
 [escribe y firma la declaración aquí]
-  /s/ JuanfegarzonB
+  Esta tarea de programación representa mi propio trabajo de acuerdo
+  con las regulaciones de la Universidad.  /s/ JuanfegarzonB
