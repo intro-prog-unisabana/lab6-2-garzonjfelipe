@@ -24,7 +24,10 @@ laboratorio 6
  *  Proporciona el enlace de tu perfil de GitHub (ej. https://github.com/afbeltranp)
  ******************************************************************************/
 
-[escribe el enlace aquí] https://github.com/garzonjfelipe
+[escribe el enlace aquí]
+https://github.com/garzonjfelipe
+
+
 
 /****************************************************************************
  *  Escribe y firma el siguiente reconocimiento estudiantil de trabajo original.
