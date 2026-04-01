@@ -1,5 +1,5 @@
 def show_inventory(inventory):
-    print("\nCurrent Inventory:")
+    print("Current Inventory:")
     for fruit, stock in inventory.items():
         print(f"{fruit}: {stock}")
     print()
@@ -34,7 +34,7 @@ def menu():
 
 
 def run_program():
-    print("Welcome to the Fruit Shop!\n")
+    print("Welcome to the Fruit Shop!")
 
     inventory = {
         "apples": 10,
@@ -43,6 +43,7 @@ def run_program():
     }
 
     while True:
+        print()
         menu()
         option = input("Enter option number: ")
 
