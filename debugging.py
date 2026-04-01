@@ -6,7 +6,7 @@ def show_inventory(inventory):
 
 
 def add_fruit(inventory):
-    fruit = input("Enter the name of the new fruit: ").strip()
+    fruit = input("Enter the name of the new fruit: ")
     if fruit in inventory:
         print(f"{fruit} already exists!\n")
     else:
@@ -16,7 +16,7 @@ def add_fruit(inventory):
 
 
 def update_stock(inventory):
-    fruit = input("Enter the name of the fruit to update: ").strip()
+    fruit = input("Enter the name of the fruit to update: ")
     if fruit in inventory:
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
         inventory[fruit] += int(amount)
@@ -48,13 +48,10 @@ def run_program():
 
         if option == "1":
             show_inventory(inventory)
-
         elif option == "2":
             add_fruit(inventory)
-
         elif option == "3":
             update_stock(inventory)
-
         elif option == "4":
             print("Goodbye!")
             break
